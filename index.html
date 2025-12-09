@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css"> <!--Сброс стандартных стилей -->
+    <link rel="stylesheet" href="css/normalize.css"> <!--Чтобы эл-ты в разных браузерах отображались одинаково-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Магазин выпечки</title>
+    <meta name="description" content="Лучшая выпечка в городе">
+    <meta name="keywords" content="выпечка, пироги, булочки, торты, десерты">
+    <meta name="author" content="Субботина Алина">
+</head>
+<body>
+    <header>
+        <img src="img/01-logo.svg" alt="Изображение логотипа">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">О НАС</a></li> <!-- ссылается на класс с id="about" -->
+            <li><a href="#">НОВОСТИ</a></li>
+            <li><a href="#">МЕНЮ</a></li>
+            <li><a href="#contacts">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section-banner"> <!--В курсе это section-about-->
+            <div class="section-banner__block"> <!--В курсе это section-about__block-->
+                <div class="section-banner__special-promo"> <!--section-about__border-->
+                    <h1 class="section-banner__title">Специальный заказ</h1>
+                    <p class="section-banner__text">Господа, понимание сути ресурсосберегающих технологий говорит о возможностях своевременного выполнения сверхзадачи. Однозначно, стремящиеся вытеснить традиционное производство, нанотехнологии рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-description" id="about">
+            <div class="section-description__icon-box">
+                <img src="icons\01-icon.svg" alt="">
+                <img src="icons\02-icon.svg" alt="">
+                <img src="icons\03-icon.svg" alt="">
+            </div>
+            <div class="section-description__text-box">
+                <h2 class="section-description__title">Выпечка - это <span class="red">вкусно </span> </h2>
+                <p class="section-description__text">
+                    Учитывая ключевые сценарии поведения, социально-экономическое развитие позволяет оценить значение системы обучения кадров, соответствующей насущным потребностям. Сложно сказать, почему диаграммы связей лишь добавляют фракционных разногласий и превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Современные технологии достигли такого уровня, что курс на социально-ориентированный национальный проект однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Прежде всего, повышение уровня гражданского сознания требует анализа своевременного выполнения сверхзадачи.
+                </p>
+            </div>
+        </section>
+        <section class="section-map" id="contacts">
+            <button class="section-map__button">ЗАКАЗАТЬ</button> <!--В курсе это section-map__title-->
+            <!--Интегирую карту из Яндекс карт-->
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0dee7ec336288783f3562cd25c7b7d5abad2a73772cecb93b60210301e218b8a&amp;source=constructor" width="900" height="400" frameborder="0"></iframe>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <nav>
+            <ul>
+            <li><a href="#about">О НАС</a></li>
+            <li><a href="#">НОВОСТИ</a></li>
+            <li><a href="#">МЕНЮ</a></li>
+            <li><a href="#contacts">КОНТАКТЫ</a></li>
+        </ul>
+        </nav>
+    </footer>
+</body>
+</html>
