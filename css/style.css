@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto';
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: local('Philosopher');
+    src: url('../fonts/Philosopher-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto');
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    }
+
+body {
+    background-color: #FFE2B0;
+}
+
+header {
+    text-align: center;
+    padding-top: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center; /*выравниваю эл-ты по главной (тут по умолчанию - горизонтальной) оси */
+    height: 58px; /*по 20px сверху и снизу + 18px размер букв */
+    align-items: center; /*выравниваю эл-ты по поперечной (тут по вертикальной) оси */
+    flex-wrap: wrap; /* если эл-ты не будут помещаться в одной строке, то будут помещаться на следющую строку */
+    list-style-type: none; /*убираю точки перед эл-ми списка*/
+    padding: 0px; /*если захочу вернуть точки, нужно будет увеличить padding-left*/
+}
+
+li {
+    margin-right: 100px;
+} 
+
+a {
+    color: black;
+    text-decoration: none; /*избавляюсь от нижнего подчеркивания у ссылок*/
+    font-size: 18px;
+    font-weight: 700;
+}
+
+li:last-child { /*псевдокласс - обращение к последнему эл-ту*/
+    margin-right: 0;
+}
+
+.section-banner {
+    height: 640px;
+    background: url(../img/01-background.jpg) center/cover no-repeat;
+    position: relative; /* Дочерний эл-т абсолютно позиционированный и должен позиционироваться от этого родительского эл-та, а не от body, поэтому relative*/
+    margin-bottom: 20px;
+}
+
+.section-banner__block {
+    width: 420px;
+    height: 190px;
+    background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%, rgba(234, 156, 65, 0.8) 100%); /*градиентная заливка с 80% прозрачностью*/
+    position: absolute; /*позиционируется от родительского*/
+    top: 54.5%; /*349px от 640px - чтобы при изм-ии размера экрана не ехало*/
+    left: 50.7%; /*730px от 1440px - чтобы при изм-ии размера экрана не ехало*/
+    padding-top: 15px; /*чтобы отодвинуть дочерний эл-т (рамку) от верха к центру */
+}
+
+.section-banner__special-promo {
+    width: 390px;
+    height: 160px;
+    border: black solid 1px;
+    margin: 0 auto;
+    padding: 17px 10px 0 28px; /*в шаблоне отступа справа не было, но добавила, т.к. иначе текст прилипает к правой рамке*/
+}
+
+.section-banner__title {
+    font-size: 36px;
+    margin: 0 0 9px 0;
+    font-family: 'Philosopher';
+}
+
+.section-banner__text {
+    font-size: 12px;
+    margin: 0;
+}
+
+.section-description {
+    margin-bottom: 20px;
+}
+.section-description__icon-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description__icon-box img:not(:last-child) { /*обращение ко всем элементам img внутри класса .icon-box, кроме последнего*/
+    margin-right: 76px;
+}
+
+.section-description__text-box {
+    text-align: center;
+
+}
+
+.section-description__title {
+    font-size: 96px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Philosopher';
+}
+
+.red {
+    color: #F15B40;
+}
+
+.section-description__text {
+    font-size: 18px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.section-map {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-map__button {
+    font-size: 36px;
+    font-family: 'Philosopher';
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%, rgba(234, 156, 65, 0.8) 100%);
+    cursor: pointer; /*меняю курсор на указатель при наведении*/
+    transition: opacity 0.2s; /*плавный переход для изменения прозрачности, длительность - 0.2 сек */
+}
+
+/*При наведении на кнопку она становится на 30% прозрачной */
+.section-map__button:hover {
+    opacity: 0.7;
+}
+
+hr {
+    border: none; /* обнуляю прошлые значения рамки */
+    border: 1px solid #999;
+    width: 1024px;
+    margin: 0 auto;
+}
